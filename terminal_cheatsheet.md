@@ -67,25 +67,61 @@
     find ~/projects '*.cfg'
 > find all files that match the pattern `*.cfg` in the `~/projects` folder. This is not dependent on an indexed database and will search the given folder and all subfolders recursively
     
-    which 
+    which
 
 ## Files and Folder
 
-    file
-    mkdir
-    touch
-    cp
-    mv
-    rm
+    file name
+> describe the type of file that `name` is
+    
+    mkdir folder
+> create a directory inside the current directory called `folder`
+    
+    touch filename
+> change the timestamp of `filename` to now without modifying any contents; creates empty text file `filename` if file doesn't exist
+    
+    cp source destination
+> copy the file `source` into directory `destination`
+    
+    mv source destination
+> move the file `source` into directory `destination`
+
+    rm my_passwords
+> deletes (unlinks) the file `my_passwords`
+    
     rmdir
+> deletes the directory `empty`, only if it is empty
+
     wildcards
-    `*`
-    `?`
+> characters that can be used as a substitute for any of a class of characters in a search
+
+    *temp*
+> refers to anything whose name has `temp` anywhere in it
+    
+    temp*
+> refers to anything whose name starts with `temp`
+       
+    *temp
+> refers to anything whose name ends with `temp`
+ 
+    `em?ty`
+> refers to anything with one character separating the start `em` and the end `ty`
+ 
     recursive flag
-    echo
-    cat
+    
+    echo Hello World!
+> prints `Hello World!`
+
+    cat hello world
+> concatenates the contents of the files `hello` and `world` and prints out the result.
+> If given a single file, it prints the contents of the file
+    
     head / tail
-    wc
+> view the top or bottom few lines of a file
+    
+    wc Remembrance_of_Things_Past
+> prints line wount, word count, and byte count for the file `Remembrance_of_Things_Past`
+    
     diff
     md5sum
     less
@@ -106,9 +142,9 @@
 - history
 - reverse search
 - pipes (redirection)
-  - `|`
-  - `>`
-  - `>>`
+  - `|` puts the output of the function on the left of `|` into the function on the right
+  - `>` (over)writes output on left into file on right
+  - `>>` appends output on left to file on right
   - `2>` 
 - return status
 - environment variables
